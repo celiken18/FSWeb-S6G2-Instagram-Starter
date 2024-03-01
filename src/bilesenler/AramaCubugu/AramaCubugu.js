@@ -9,6 +9,11 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import "./AramaCubugu.css";
 
+const change = (evt) => {
+  const { value } = evt.target;
+  console.log(value);
+};
+
 const AramaCubugu = (props) => {
   return (
     <div className="search-bar-wrapper">
@@ -16,7 +21,7 @@ const AramaCubugu = (props) => {
         <FontAwesomeIcon icon={faInstagram} />
       </div>
       <form className="search-form">
-        <input type="text" placeholder="Arama" />
+        <input type="text" placeholder="Arama" onChange={change} />
       </form>
       <div className="social-wrapper">
         <div className="social">
